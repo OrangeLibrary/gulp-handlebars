@@ -146,8 +146,9 @@ describe('gulp-handlebars', function() {
         // But I got an error of  expected: "BASIC TEMPLATE\n", actual: "BASIC TEMPLATE"
         // so that I manually adding the newLine character.
         // I think it related to plain text in the 'Basic_htmlbars.js'
+        // NOTE - check your text editor for automaticallly adding newLinea
         var expected = getExpectedString('Basic_htmlbars.js');
-        var tested = String(newFile.contents)+'\n';
+        var tested = String(newFile.contents);
         tested.should.equal(expected);
         // fileMatchesExpected(newFile, 'Basic_htmlbars.js', 'Basic.js');
 
